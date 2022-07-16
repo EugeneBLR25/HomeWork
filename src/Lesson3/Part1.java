@@ -31,7 +31,7 @@ public class Part1 {
             default -> System.out.println("Введите корректный номер месяца с 1 до 12");
         }
         // Вариант 2, использование if-else
-        System.out.println("Вариант 2 с if-elce");
+        System.out.println("Вариант 2 с if-else");
         System.out.print("Введите номер месяца:");
         int mouthNumber2 = scanner.nextInt();
         System.out.print("Время года: ");
@@ -43,6 +43,8 @@ public class Part1 {
             System.out.print("Лето");
         } else if (mouthNumber2 == 9 || mouthNumber2 == 10 || mouthNumber2 == 11) {
             System.out.print("Осень");
+        } else {
+            System.out.println("Введено неверное число");
         }
 
         // Задача 2

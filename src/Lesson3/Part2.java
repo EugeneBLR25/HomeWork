@@ -52,7 +52,7 @@ public class Part2 {
         while (cutOfSeven >= 0 && cutOfSeven < 100) {
             if (cutOfSeven % 7 == 0)
                 System.out.print(cutOfSeven + " ");
-            cutOfSeven++;
+            cutOfSeven+=7;
         }
 
         // Задание 5
