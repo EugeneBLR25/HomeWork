@@ -12,23 +12,19 @@ public class Part1 {
         System.out.println("Задача 1");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Вариант с использованием Switch.");
+        String winter = "Зима";
+        String spring = "Весна";
+        String summer = "Лето";
+        String autumn = "Осень";
         System.out.print("Введите номер месяца:");
         int monthNumber = scanner.nextInt();
         System.out.print("Время года: ");
         switch (monthNumber) {
-            case 1 -> System.out.println("Зима");
-            case 2 -> System.out.println("Зима");
-            case 3 -> System.out.println("Весна");
-            case 4 -> System.out.println("Весна");
-            case 5 -> System.out.println("Весна");
-            case 6 -> System.out.println("Лето");
-            case 7 -> System.out.println("Лето");
-            case 8 -> System.out.println("Лето");
-            case 9 -> System.out.println("Осень");
-            case 10 -> System.out.println("Осень");
-            case 11 -> System.out.println("Осень");
-            case 12 -> System.out.println("Зима");
-            default -> System.out.println("Введите корректный номер месяца с 1 до 12");
+            case 1,2,12: System.out.println(winter); break;
+            case 3,4,5: System.out.println(spring); break;
+            case 6,7,8: System.out.println(summer); break;
+            case 9,10,11: System.out.println(autumn);break;
+            default: System.out.println("Введите корректный номер месяца с 1 до 12");
         }
         // Вариант 2, использование if-else
         System.out.println("Вариант 2 с if-else");
@@ -88,14 +84,14 @@ public class Part1 {
         int color = scanner.nextInt();
         System.out.print("Выбранный цвет: ");
         switch (color) {
-            case 1 -> System.out.println("Красный");
-            case 2 -> System.out.println("Оранжевый");
-            case 3 -> System.out.println("Желтый");
-            case 4 -> System.out.println("Зеленый");
-            case 5 -> System.out.println("Голубой");
-            case 6 -> System.out.println("Синий");
-            case 7 -> System.out.println("Фиолетовый");
-            default -> System.err.println("Цвет не обнаружен. Введите числа от 1 до 7.");
+            case 1:System.out.println("Красный"); break;
+            case 2:System.out.println("Оранжевый"); break;
+            case 3:System.out.println("Желтый"); break;
+            case 4:System.out.println("Зеленый"); break;
+            case 5:System.out.println("Голубой"); break;
+            case 6:System.out.println("Синий"); break;
+            case 7:System.out.println("Фиолетовый"); break;
+            default:System.err.println("Цвет не обнаружен. Введите числа от 1 до 7.");
         }
     }
 }

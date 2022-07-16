@@ -75,7 +75,7 @@ public class Part2 {
         int count2 = 0;
         int sqr;
         for (int i = 10; i <= 20; i++) {
-            sqr = (int) Math.pow(i, 2);
+            sqr = i*i;
             count2++;
             System.out.print(count2 + ")" + sqr + "; ");
         }
