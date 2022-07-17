@@ -12,20 +12,20 @@ public class Part1 {
         System.out.println("Задача 1");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Вариант с использованием Switch.");
-        String winter = "Зима";
-        String spring = "Весна";
-        String summer = "Лето";
-        String autumn = "Осень";
+        String partOfyear = null;
         System.out.print("Введите номер месяца:");
         int monthNumber = scanner.nextInt();
         System.out.print("Время года: ");
         switch (monthNumber) {
-            case 1,2,12: System.out.println(winter); break;
-            case 3,4,5: System.out.println(spring); break;
-            case 6,7,8: System.out.println(summer); break;
-            case 9,10,11: System.out.println(autumn);break;
+            case 1,2,12: partOfyear="Зима"; break;
+            case 3,4,5: partOfyear="Весна"; break;
+            case 6,7,8: partOfyear="Лето"; break;
+            case 9,10,11: partOfyear="Осень";break;
             default: System.out.println("Введите корректный номер месяца с 1 до 12");
         }
+        System.out.println(partOfyear);
+        
+        
         // Вариант 2, использование if-else
         System.out.println("Вариант 2 с if-else");
         System.out.print("Введите номер месяца:");
