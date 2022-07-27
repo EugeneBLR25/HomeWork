@@ -68,7 +68,7 @@ public class Part2 {
         Arrays.sort(namesOfPeople);
         System.out.println(Arrays.toString(namesOfPeople));
 
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------");
 
         /*4. Реализуйте алгоритм сортировки пузырьком, проставляя комментарии на каждом шаге.*/
         System.out.println("Задача 4");
