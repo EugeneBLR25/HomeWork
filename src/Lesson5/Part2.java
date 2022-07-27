@@ -50,7 +50,7 @@ public class Part2 {
                 sum += array2[i][j];
             }
         }
-        System.out.println(Arrays.deepToString(array2) + " - Исходный массив\n" + sum + " - сумма");
+        System.out.println(Arrays.deepToString(array2) + " - Исходный массив.\n" + sum + " - сумма.");
 
         System.out.println("-------------------------------------------------------------------------");
 

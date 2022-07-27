@@ -13,38 +13,35 @@ public class Part1 {
  */
         System.out.println("Задача 1");
         int[] array = new int[]{1, 1, 12, 13, 12, 22, 32, 22, 43, 23, 53, 5, 2, 2, 2, 65};
+        Arrays.sort(array);
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
         int number = scanner.nextInt();
-        int counter = 0;
-        for (int i : array) {
-            if (i == number) {
-                counter++;
-            }
-        }
-        System.out.println(counter > 0 ? "Число " + number + " входит в массив. Количество повторений: " + counter : "Число " + number + " не входит в массив");
+        System.out.println(Arrays.binarySearch(array, number) >= 0 ? "Число " + number + " входит в массив" : "Число " + number + " не входит в массив");
         System.out.println("-----------------------------------------------------");
 /*
   2. Создайте массив целых чисел. Удалите все вхождения заданного числа из массива. Пусть
   число задается с консоли (класс Scanner). Если такого числа нет выведите сообщение об этом.
  */
         System.out.println("Задача 2");
-        int[] array2 = new int[20];
-        for (int i = 0; i < array2.length; i++) {
-            array2[i] = (int) ((Math.random() * 20) + 10);
-        }
+        int[] array2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 10, 1};
         System.out.println("Созданный массив: " + Arrays.toString(array2));
         System.out.print("Введите число: ");
         int number2 = scanner.nextInt();
-        int delete = 0;
+        int counter = 0;
         for (int i = 0; i < array2.length; i++) {
             if (array2[i] == number2) {
-                array2[i] = (int) (Math.random() * 20);
-                delete++;
+                counter++;
             }
         }
-        System.out.println(delete == 0 ? "Заданного числа в массиве не найдено." : "Новый   массив: " + Arrays.toString(array2));
-
+        int[] array2_1 = new int[array2.length - counter];
+        int index = 0;
+        for (int i = index; i < array2.length; i++) {
+            if (number2 != array2[i]) {
+                array2_1[index++] = array2[i];
+            }
+        }
+        System.out.println("Отредактированный массив: " + Arrays.toString(array2_1));
         System.out.println("-----------------------------------------------------");
 /*
   3. Создайте и заполните массив случайными числами и выведите минимальное,
@@ -59,29 +56,15 @@ public class Part1 {
         for (int i = 0; i < array3.length; i++) {
             array3[i] = (int) ((Math.random() * 20) + 10);
         }
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-        double average = 0;
+        double total = 0;
         System.out.println(Arrays.toString(array3));
-        System.out.print("Минимальное значение: ");
+        Arrays.sort(array3);
         for (int i = 0; i < array3.length; i++) {
-            if (array3[i] < min) {
-                min = array3[i];
-            }
+            total += array3[i];
         }
-        System.out.println(min);
-        System.out.print("Максимальное значение: ");
-        for (int i = 0; i < array3.length; i++) {
-            if (array3[i] > max) {
-                max = array3[i];
-            }
-        }
-        System.out.println(max);
-        System.out.print("Среднее значение: ");
-        for (int i = 0; i < array3.length; i++) {
-            average += array3[i];
-        }
-        System.out.println(average / array3.length);
+        System.out.println("Минимальное значение: "+array3[0]);
+        System.out.println("Максимальное значение: "+array3[num-1]);
+        System.out.println("Среднне значение: "+total / array3.length);
         System.out.println("-----------------------------------------------------------");
 
 /*
@@ -95,20 +78,16 @@ public class Part1 {
         int[] array5 = new int[5];
         for (int i = 0; i < array4.length; i++) {
             array4[i] = (int) ((Math.random() * 20 + 10));
-        }
-        for (int i = 0; i < array5.length; i++) {
             array5[i] = (int) ((Math.random() * 20 + 10));
         }
-        double avArray4 = 0;
-        double avArray5 = 0;
-        for (int i : array4) {
-            avArray4 += i;
+        double sumArray4 = 0;
+        double sumArray5 = 0;
+        for (int i=0; i<array4.length; i++) {
+            sumArray4 += array4[i];
+            sumArray5 += array5[i];
         }
-        for (int i : array5) {
-            avArray5 += i;
-        }
-        double average1 = avArray4 / array4.length;
-        double average2 = avArray5 / array5.length;
+        double average1 = sumArray4 / array4.length;
+        double average2 = sumArray5 / array5.length;
         System.out.println("1-й массив: " + Arrays.toString(array4) + " - " + average1 +
                 "\n" + "2-й массив: " + Arrays.toString(array5) + " - " + average2);
         if (average1 > average2) {
@@ -120,4 +99,5 @@ public class Part1 {
         }
     }
 }
+
 

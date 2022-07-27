@@ -15,30 +15,28 @@ public class Part2 {
         Scanner scanner = new Scanner(System.in);
         int[] array = null;
         int[] array2;
-        int number;
+        int sizeOfArray;
         int counter1 = 0;
-        int counter2 = 0;
         System.out.print("Введите число с 6 до 10: ");
-        while (scanner.hasNextInt()) {
-            number = scanner.nextInt();
-            if (number > 5 && number <= 10) {
-                array = new int[number];
-                for (int i = 0; i < array.length; i++) {
-                    array[i] = (int) (Math.random() * 20);
-                    if (array[i] % 2 == 0) {
-                        counter1++;
-                    }
-                }
+        while (true) {
+            sizeOfArray = scanner.nextInt();
+            if (sizeOfArray > 5 && sizeOfArray <= 10) {
+                array = new int[sizeOfArray];
                 break;
             } else {
                 System.out.print("Введено не корректное число. Повторите попытку\nВведите число с 6 до 10: ");
             }
         }
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 20);
+            if (array[i] % 2 == 0) {
+                counter1++;
+            }
+        }
         array2 = new int[counter1];
-        for (int arr : array) {
-            if (arr % 2 == 0) {
-                array2[counter2] = arr;
-                counter2++;
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if(array[i]%2==0){
+                array2[j++]=array[i];
             }
         }
         System.out.println(Arrays.toString(array));
@@ -92,6 +90,6 @@ public class Part2 {
                 }
             }
         }
-        System.out.println(Arrays.toString(array4)+" - отсортированый массив"); //Выводим массив в строку после завершения сортировки.
+        System.out.println(Arrays.toString(array4) + " - отсортированый массив"); //Выводим массив в строку после завершения сортировки.
     }
 }
