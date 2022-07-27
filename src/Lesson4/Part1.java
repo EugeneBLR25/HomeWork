@@ -11,7 +11,7 @@ public class Part1 {
   входит ли заданное число в массив или нет. Пусть число для поиска задается с консоли
   (класс Scanner).
  */
-        System.out.println("Задача 1");
+        System.out.println("Задача 1.");
         int[] array = new int[]{1, 1, 12, 13, 12, 22, 32, 22, 43, 23, 53, 5, 2, 2, 2, 65};
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
