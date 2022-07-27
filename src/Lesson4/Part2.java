@@ -11,7 +11,7 @@ public class Part2 {
         программа должна просить пользователя повторить ввод. Создайте второй массив только из четных
         элементов первого массива, если они там есть, и вывести его на экран.*/
 
-        System.out.println("Задача 1");
+        System.out.println("Задача 1.");
         Scanner scanner = new Scanner(System.in);
         int[] array = null;
         int[] array2;
