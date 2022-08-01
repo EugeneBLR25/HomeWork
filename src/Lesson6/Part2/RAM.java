@@ -12,16 +12,14 @@ public class RAM {
         this.nameOfRAM = nameOfRAM;
         this.spaceOfRAM = spaceOfRAM;
     }
-
-    @Override
-    public String toString() {
-        String descriptionOfHDD;
+    public String descriptionRAM(){
+        String descriptionOfRAM;
         if (nameOfRAM == null && spaceOfRAM == 0) {
-            descriptionOfHDD = "{описание не доступно}";
+            descriptionOfRAM = "{описание не доступно}";
         } else {
-            descriptionOfHDD = "{" + "Название RAM='" + nameOfRAM + '\'' +
+            descriptionOfRAM = "{" + "Название RAM='" + nameOfRAM + '\'' +
                     ", Объем RAM=" + spaceOfRAM + '}';
         }
-        return descriptionOfHDD;
+        return descriptionOfRAM;
     }
 }

@@ -18,31 +18,27 @@ package Lesson6.Part2;
  */
 public class Computer {
     double price;
-    String modelOfComputer;
-    RAM ram;
-    HDD hdd;
+    String model;
+    RAM memory;
+    HDD diskSpace;
 
     public Computer(double price, String modelOfComputer) {
         this.price = price;
-        this.modelOfComputer = modelOfComputer;
-        ram = new RAM();
-        hdd = new HDD();
+        this.model = modelOfComputer;
+        memory = new RAM();
+        diskSpace = new HDD();
     }
 
     public Computer(double price, String modelOfComputer, RAM ram, HDD hdd) {
         this.price = price;
-        this.modelOfComputer = modelOfComputer;
-        this.ram = ram;
-        this.hdd = hdd;
+        this.model = modelOfComputer;
+        this.memory = ram;
+        this.diskSpace = hdd;
     }
-
-    @Override
-    public String toString() {
-        return "Computer{" +
-                "Цена=" + price +
-                ", Модель='" + modelOfComputer + '\'' +
-                ", RAM=" + ram.toString() +
-                ", HDD=" + hdd.toString() +
-                '}';
+    public void lookDescription(){
+        System.out.println("Computer{" +"Цена=" + price +", Модель='" + model + '\'' +
+                ", RAM=" + memory.descriptionRAM() +
+                ", HDD=" + diskSpace.descriptionHDD() +
+                "}");
     }
 }

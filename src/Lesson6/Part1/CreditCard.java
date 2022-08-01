@@ -14,13 +14,9 @@ public class CreditCard {
     int idBankAccount;
     double moneyOnAccount;
 
-    public CreditCard(int idBankAccount, double moneyOnAccount) { //Конструктор с проверкой отрицательного баланса
+    public CreditCard(int idBankAccount, double moneyOnAccount) { //Конструктор
         this.idBankAccount = idBankAccount;
-        if (moneyOnAccount >= 0) {
-            this.moneyOnAccount = moneyOnAccount;
-        } else {
-            System.err.println("Счет не может быть меньше 0.");
-        }
+        this.moneyOnAccount = moneyOnAccount;
     }
     // Положить деньги
     public void putMoneyOnAccount(double amountOfMoney) {
@@ -38,13 +34,8 @@ public class CreditCard {
             System.err.println("Недостаточно средств для снятия.");
         }
     }
-    public void checkOfAccount(){
-        System.out.println(toString());
-    }
-    //Вывод информации по счету
-    @Override
-    public String toString() {
-        return "CreditCard{" + "Номер счета:" + idBankAccount +
-                ", Количество денег на счете:" + moneyOnAccount +'}';
+    public void lookOfAccount(){
+        System.out.println("CreditCard{" + "Номер счета:" + idBankAccount +
+                ", Количество денег на счете:" + moneyOnAccount +'}');
     }
 }

@@ -14,15 +14,13 @@ public class HDD {
         this.spaceOFHDD = spaceOFHDD;
         this.typeofHDD = typeofHDD;
     }
-
-    @Override
-    public String toString() {
+    public String descriptionHDD(){
         String descriptionOfHDD;
-         if (nameOfHDD == null && typeofHDD == null && spaceOFHDD == 0) {
+        if (nameOfHDD == null && typeofHDD == null && spaceOFHDD == 0) {
             descriptionOfHDD="{описание не доступно}";
 
         } else {
-             descriptionOfHDD="{" + "Имя HDD='" + nameOfHDD + '\'' +
+            descriptionOfHDD="{" + "Имя HDD='" + nameOfHDD + '\'' +
                     ", Объем HDD=" + spaceOFHDD +
                     ", Тип HDD='" + typeofHDD + '\'' +
                     '}';
